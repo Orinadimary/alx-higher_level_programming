@@ -2,4 +2,4 @@
 str1 = "Holberton"
 str2 = "School"
 str1 += " " + str2
-print("Welcome to Holberton School {}!".format(str1))
+print(f"Welcome to Holberton School {}!".format(str1))

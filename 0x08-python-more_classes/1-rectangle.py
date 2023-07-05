@@ -1,36 +1,31 @@
 #!/usr/bin/python3
 
 """
-Defines a rectagle object
+Defines a rectangle object
 """
+
+
 class Rectangle:
     """
-    Represents the Rectangle
-    
+    Initializes the new rectangle
+    Args:
+        width (int): width of the instance of the new rectangle
     """
     def __init__(self, width=0, height=0):
-        
-        """
-        initialize the new rectangle.
-        Args:
-            width (int): Width of the new Rectagle.
-            Height (int): Height of the new Rectangle.
-            """
-            self.width=width
-            self.height=height
-            
+        self.width = width
+        self.height = height
+
     @property
     def width(self):
         """
         Gets the width of the instance.
-        
         """
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Set the value of the width of the rectangle.
+        Set the width value of the rectangle.
         Parameters:
             value (int): The width of the rectangle.
         Raises:
@@ -48,7 +43,7 @@ class Rectangle:
     def height(self):
         """
         Gets the width of the instance.
-        
+        Returns:
         """
         return self.__height
 
@@ -68,3 +63,4 @@ class Rectangle:
                 raise ValueError("height must be >= 0")
         else:
             raise TypeError("height must be an integer")
+

@@ -1,7 +1,7 @@
 # 101-lazy_matrix_mul.txt
 
 =================================
-How to Use 101-lazy_matrix_mul.py
+Doctest for 101-lazy_matrix_mul.p
 =================================
 
 This module defines a matrix multiplication function

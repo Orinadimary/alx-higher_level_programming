@@ -6,7 +6,8 @@
 def read_file(filename=""):
     """Function that reads a test file UTF.
     Args:
-    filename: the file to be read
+    filename:
+    the file to be read
 
     return:
     prints the file to stdout

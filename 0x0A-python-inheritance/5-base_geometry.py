@@ -1,7 +1,6 @@
 #!/usr/bin/python3
+"""Defines an empyty basegeometry."""
 
-"""Defines an empyty basegeometry"""
-
-Class BaseGeometry:
-    """Represents the BaseGeometry"""
-    Pass
+class BaseGeometry:
+    """Represents the BaseGeometry."""
+    pass

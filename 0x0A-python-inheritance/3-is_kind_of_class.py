@@ -2,6 +2,7 @@
 
 """Defines a functions that checks class"""
 
+
 def is_kind_of_class(obj, a_class):
     """checks if the object in the instance and the class are the same.
 

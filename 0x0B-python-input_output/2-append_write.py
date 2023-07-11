@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This is the module for 2-append_write.py
+Module for 2-append_write.py
 """
 
 
@@ -9,7 +9,7 @@ def append_write(filename="", text=""):
     """
     This function append text to filename
 
-    Params:
+    Args:
         filename: file to create or append text to
         text: text to insert into filename
 

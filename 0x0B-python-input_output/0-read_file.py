@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Definess a function that reads UTF text file"""
+"""Module for 0-read_file.py"""
 
 
 def read_file(filename=""):

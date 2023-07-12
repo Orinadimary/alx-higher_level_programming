@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 
 """
-this is the module for 8-claass_to_json.py
+Defines the module for 8-claass_to_json.py
 """
 
 
 def class_to_json(obj):
-    """ this function turn a class object to json
-    Params:
+    """ function turn a class object to json
+    Args:
         obj: class object
     """
     if isinstance(obj, dict):

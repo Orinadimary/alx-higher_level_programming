@@ -2,7 +2,10 @@
 
 """Defines a function that checks True or Fslse"""
 
+
 def inherits_from(obj, a_class):
+
+
 """checks if objects is  in a given class.
 
     Args:
@@ -14,4 +17,5 @@ def inherits_from(obj, a_class):
     """
     if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
-    return False
+    else:
+        return False

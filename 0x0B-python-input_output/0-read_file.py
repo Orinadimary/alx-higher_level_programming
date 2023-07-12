@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Module for 0-read_file.py"""
+"""Defines a function that reads a file for 0-read_file.py"""
 
 
 def read_file(filename=""):
-    """Function that reads a test file UTF.
+    """Function that reads a file
     Args:
     filename:
     the file to be read

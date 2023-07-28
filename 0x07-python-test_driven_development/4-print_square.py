@@ -2,6 +2,7 @@
 # 4-print_square.py
 """Defines printing a square function."""
 
+
 def print_square(size):
     """Print a square with the # character.
 

@@ -2,6 +2,7 @@
 
 """Defines a function that checks True or Fslse"""
 
+
 def is_same_class(obj, a_class):
     """Checks if objects is  in a given class.
 

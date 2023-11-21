@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-"""Defines a function that checks True or Fslse"""
-
+"""Defines a function that checks True or False"""
 
 def is_same_class(obj, a_class):
     """Checks if objects is  in a given class.

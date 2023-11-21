@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 
-"""Defines an empyty basegeometry."""
+"""
+this is the module for the BaseGeomety class
+"""
 
 
 class BaseGeometry:
-    """Represents the BaseGeometry."""
+    """ this is the base geomerty class """
 
+    """ public instance"""
     def area(self):
-        """Not implemented"""
-        raise Exception("area() is not implemented"()
+        raise Exception("area() is not implemented")

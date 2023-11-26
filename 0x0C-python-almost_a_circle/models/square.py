@@ -1,69 +1,81 @@
 #!/usr/bin/python3
 
-"""Defines a square class"""
+"""
+This is the module for square class
+"""
+
 from models.rectangle import Rectangle
 
 
-class square(Rectangle):
-    """Represents a square."""
+class Square(Rectangle):
+    """This is the square object """
 
+    # Constructor
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialiaze the square.
-
-        Args:
-            size (int): size of the new square
-            x (int): coordinates of the new square
-            y (int): coordinates of the new sqquare
-            id (int): identity of the new square
         """
+        Initialize the sqaure object
+        Params:
+            size: size of the sqaure
+            x: x cordinate
+            y: y cordinate
+            id: id of the sqaure instance
+        """
+        super().__init__(size, size, x, y, id)
 
-        super().__init__(size, x, y, id)
+    def __str__(self):
+        """String reprsentation of square"""
+        s1 = self.width
+        x = self.x
+        y = self.y
+        d = self.id
+        return f"[Square] ({d}) {x}/{y} - {s1}"
 
-        @property
-        def size(self):
-            """set/get the size of the new square"""
-            return self.width
+    @property
+    def size(self):
+        """Get the size of the square"""
+        return self.width
 
-        @size.setter
-        def size(self, value):
-            self.width = value
-            self.height = value
+    @size.setter
+    def size(self, value):
+        """Set the value of size using
+            width and height of rectangle class
+            and equate them to a value:
+        """
+        self.width = value
+        self.height = value
 
-        def update(self, *args, **kwargs):
-            """update the square
-            Args:
-                *args (int): New attribute value
-                       1st argument represents id attribute
-                       2nd argument represents size attribute
-                       3rd argument represents x attribute
-                       4th argument represents y attribute
-                **kwargs (dict): New pairs of attributes
-            """
-            if args and len(args) != 0:
-                a = 0
-                for arg in args:
-                    if a == 0:
-                        if arg is None:
-                            self.__init__(self.size, self.x, self.y)
-                        else:
-                            self.id = v
-                        elif k == "size":
-                            self.size = v
-                        elif k == "x":
-                            self.x = v
-                        elif k == "y":
-                            self.y == v
+    """Public method Update"""
+    def update(self, *args, **kwargs):
+        """
+        Updates the instance attributes of the Square class.
+        Args:
+            *args: Variable-length argument list
+                   containing the values to update the attributes.
+                   The order of the arguments should be:
+                   id, size, x, y.
+            **kwargs: key value pair indicating which attribute
+                      to update
+        """
+        attribute_names = ('id', 'size', 'x', 'y')
 
-        def to_dictionary(self):
-           """Return dictionary represenation of the square."""
-           return [
-                   "id": self.id
-                   "size": self.size
-                   "x": self.x
-                   "y": self.y
-                   ]
+        if args:
+            for i, arg in enumerate(args):
+                if i < len(attribute_names):
+                    setattr(self, attribute_names[i], arg)
 
+        for key, value in kwargs.items():
+            if key in attribute_names:
+                setattr(self, key, value)
 
-        def __str__(self):
-           """Return the print() and str() representation of the square."""
-           return "[square] ({}) {}/{} = {}".format(self.id, self.x, self.y, self.width)
+    """public method """
+    def to_dictionary(self):
+        """
+        this method return a dictionary of the square
+        """
+        dic = {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'size': self.width
+                }
+        return dic

@@ -1,24 +1,23 @@
 #!/usr/bin/python3
 """
-this script filter states using ORM
-script should take 3 arguments:
-    mysql username,
-    mysql password,
-    database name
+This is the model city  module
 """
 
-import sys
-from sqlalchemy import create_engine as e
-from sqlalchemy.orm import sessionmaker
-from model_state import State, Base
+from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy.ext.declarative import declarative_base
 
-if __name__ == "__main__":
-    engine = e("mysql+mysqldb://{}:{}@localhost/{}"
-               .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-               pool_pre_ping=True)
+Base = declarative_base()
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
 
-    for state in session.query(State).order_by(State.id):
-        print("{}: {}".format(state.id, state.name))
+class City(Base):
+    """
+    City object that inherits from Base
+        __tablename__: mysql table name
+        id: unique primary key
+        name: city name
+        state_id: foreign key from the states table
+    """
+    __tablename__ = 'cities'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
